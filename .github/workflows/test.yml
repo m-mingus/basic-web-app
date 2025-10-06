@@ -2,26 +2,26 @@ name: CI tests
 
 on:
 
-push:
+    push:
 
-branches:
+        branches:
 
-- main
+            - main
 
 jobs:
 
-test:
+    test:
 
-    runs-on: ubuntu-latest
+        runs-on: ubuntu-latest
 
-    name: Run ESLint and Jest testing
+        name: Run ESLint and Jest testing
 
-    steps:
+        steps:
 
-    - uses: actions/checkout@v3
+        - uses: actions/checkout@v3
 
-    - uses: bahmutov/npm-install@v1
+        - uses: bahmutov/npm-install@v1
 
-    - run: npm run lint
+        - run: npm run lint
 
-    - run: npm run test
+        - run: npm run test
